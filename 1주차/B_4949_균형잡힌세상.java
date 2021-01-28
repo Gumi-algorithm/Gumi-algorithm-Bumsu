@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class B_49049_균형잡힌세상 {
+public class B_4949_균형잡힌세상 {
 	
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(

@@ -3,10 +3,10 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Scanner;
 
-//	¹éÁØ 5397¹ø Å°·Î°Å
 //	2021-01-26
+//	ë°±ì¤€ 5397ë²ˆ í‚¤ë¡œê±°
 
-public class B_5397_Å°·Î°Å {
+public class B_5397_í‚¤ë¡œê±° {
 
 	public static void main(String[] args) {
 		

@@ -21,6 +21,7 @@ public class B_14891_톱니바퀴 {
 				gear[i][j] = data.charAt(j) - '0';
 			}
 		}
+		
 		int k = Integer.parseInt(br.readLine());
 		for(int i = 0; i < k; i++) {
 			cmd = new int[4]; // 톱니바퀴별 명령 저장용
@@ -31,9 +32,9 @@ public class B_14891_톱니바퀴 {
 			cmd[n] = t; // 입력받은 톱니바퀴 명령 저장
 			makeCmd(n, t); 
 			for(int j = 0; j < 4; j++) {
-				if(cmd[j] == 1) {
-					clock(j);
-				}else if(cmd[j] == - 1) {
+				if(cmd[j] == 1) { // 1이면 시계 방향
+					clock(j); 
+				}else if(cmd[j] == - 1) { // -1이면 반시계 방향
 					antiClock(j);
 				}
 			}
@@ -43,7 +44,7 @@ public class B_14891_톱니바퀴 {
 		}
 		System.out.println(res);
 	}
-//	방향이 같으면 회전 아니면 회전 하지 않음.
+
 	static void makeCmd(int n, int t) {
 		if(check[n]) return;
 		int next;
@@ -97,17 +98,3 @@ public class B_14891_톱니바퀴 {
 		return -1;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

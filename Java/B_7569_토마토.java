@@ -71,7 +71,6 @@ public class B_7569_토마토 {
 					}
 				}
 				if(flag && arr[ny][nx] == 0) {
-					flag = true;
 					time = Math.max(time, cur.t + 1);
 					queue.offer(new Position(ny, nx, ny / N, cur.t + 1));
 					arr[ny][nx] = 1;

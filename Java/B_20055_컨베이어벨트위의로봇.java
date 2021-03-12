@@ -18,8 +18,6 @@ public class B_20055_컨베이어벨트위의로봇 {
 
 	static int N, K, cnt = 0, time = 0;
 	static position[][] arr;
-	static boolean[][] robot;
-	static ArrayList<int[]> list = new ArrayList<>();
 	static int[] dy = {0, 1, 0, -1}, dx = {1, 0, -1, 0};
 	
 	public static void main(String[] args) throws IOException {
@@ -31,7 +29,6 @@ public class B_20055_컨베이어벨트위의로봇 {
 		N = Integer.parseInt(st.nextToken());
 		K = Integer.parseInt(st.nextToken());
 		arr = new position[2][N];
-		robot = new boolean[2][N];
 		int index = 0;
 		st = new StringTokenizer(br.readLine(), " ");
 		for(int i = 0; i < 2; i++) {

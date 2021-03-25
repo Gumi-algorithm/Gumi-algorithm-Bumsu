@@ -68,3 +68,61 @@ public class B_21278_호석이두마리치킨 {
 		return res;
 	}
 }
+
+// 플로이드-와샬 사용 (위 코드(O(n^4)보다 빠름 (O(n^3))) 
+//import java.io.BufferedReader;
+//import java.io.IOException;
+//import java.io.InputStreamReader;
+//import java.util.Arrays;
+//import java.util.StringTokenizer;
+//
+//public class Main {
+//
+//	public static void main(String[] args) throws IOException {
+//		
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		StringTokenizer st;
+//		
+//		st = new StringTokenizer(br.readLine(), " ");
+//		int N = Integer.parseInt(st.nextToken());
+//		int M = Integer.parseInt(st.nextToken());
+//		
+//		final int INF = 10000;
+//		int[][] arr = new int[N + 1][N + 1];
+//		for(int i = 0; i < N + 1; i++) {
+//			Arrays.fill(arr[i], INF);
+//			arr[i][i] = 0;
+//		}
+//		for(int i = 0; i < M; i++) {
+//			st = new StringTokenizer(br.readLine(), " ");
+//			int from = Integer.parseInt(st.nextToken());
+//			int to = Integer.parseInt(st.nextToken());
+//			arr[from][to] = 1;
+//			arr[to][from] = 1;
+//		}
+//		
+//		for(int i = 1; i < N + 1; i++) {
+//			for(int j = 1; j < N + 1; j++) {
+//				for(int k = 1; k < N + 1; k++) {
+//					arr[j][k] = Math.min(arr[j][i] + arr[i][k], arr[j][k]);
+//				}
+//			}
+//		}
+//		int x = 0, y = 0;
+//		int res = Integer.MAX_VALUE;
+//		for(int i = 1; i < N; i++) {
+//			for(int j = i + 1; j < N + 1; j++) {
+//				int sum = 0;
+//				for(int k = 1; k < N + 1; k++) {
+//					sum += Math.min(arr[i][k], arr[j][k]);
+//				}
+//				if(res > sum) {
+//					res = sum;
+//					y = i;
+//					x = j;
+//				}
+//			}
+//		}
+//		System.out.println(y + " " + x + " " + res * 2);
+//	}
+//}

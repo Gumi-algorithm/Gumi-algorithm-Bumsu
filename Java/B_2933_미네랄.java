@@ -75,21 +75,21 @@ public class B_2933_미네랄 {
 	static int getLen(int[] h, boolean[][] c) { // 미네랄이 떨어져야할 거리 구하기
 		int len = R;
 		for(int i = 0; i < C; i++) {
-			if(h[i] != -1) {
-				h[i] = R - 1 - h[i];
+			if(h[i] != -1) { // 떨어진 미네랄이 없는 경우 제외
+				h[i] = R - 1 - h[i]; // 밑에 아무것도 없다면 떨어져야할 거리
 				int temp = 0;
 				for(int j = R - 1; j >= 0; j--) {
 					if(!c[j][i]) {
 						temp += 1;
-						if(arr[j][i] == 'x') {
+						if(arr[j][i] == 'x') { // 떨어져야할 미네랄 밑에 미네랄이 있으면 그만큼 빼줌
 							h[i] -= temp;
 							temp = 0;
 						}
-					}else {
+					}else { // 떨어져야할 미네랄이 나오면 종료
 						break;
 					}
 				}
-				len = Math.min(len, h[i]);
+				len = Math.min(len, h[i]); // 떨어져야할 높이의 최소를 구함
 			}
 		}
 		return len;
@@ -103,7 +103,7 @@ public class B_2933_미네랄 {
 		que.offer(new Position(y, x));
 		while(!que.isEmpty()) { // 분리된 미네랄들 bfs로 확인(check 배열에 true로 저장)
 			Position now = que.poll();
-			height[now.x] = Math.max(height[now.x], now.y);
+			height[now.x] = Math.max(height[now.x], now.y); // x축마다 가장 밑에 있는 미네랄 높이 저장
 			check[now.y][now.x] = true;
 			for(int i = 0; i < 4; i++) {
 				int ny = now.y + dy[i];

@@ -37,9 +37,9 @@ public class B_7579_앱 {
 		int[] dp = new int[sum + 1];
 		for(int i = 0; i < N; i++) {
 			for(int j = sum; j >= 0; j--) {
-				if(arr[i].c > j) {
+				if(arr[i].c > j) { // 비용이 더 많이 들면 메모리 삭제를 못함
 					dp[j] = dp[j]; 
-				}else {
+				}else { // 삭제가 가능하면, 할당 받은 비용 - 해당 비용 + 해당 메모리, 삭제하기 전과 비교
 					dp[j] = Math.max(dp[j], dp[j - arr[i].c] + arr[i].m);
 				}
 			}

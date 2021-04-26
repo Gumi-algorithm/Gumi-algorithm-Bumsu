@@ -22,7 +22,7 @@ public class B_2075_N번째큰수 {
 				} else {
 					if (pq.peek() < num) { // pq의 최솟값보다 큰 경우
 						pq.offer(num); // 값을 추가
-						pq.poll(); // 최솟값 제거
+						pq.poll(); // 최솟값 제거 
 					}
 				}
 			}

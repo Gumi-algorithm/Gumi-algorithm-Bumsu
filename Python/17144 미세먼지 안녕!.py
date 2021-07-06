@@ -2,7 +2,7 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
-dy, dx = [-1, 0, 1, 0], [0, 1, 0, -1] # 북 동 남 서
+dy, dx = [-1, 0, 1, 0], [0, 1, 0, -1]  # 북 동 남 서
 N, M, T = map(int, input().split())
 arr = []
 airCleancer = []
@@ -11,6 +11,8 @@ for i in range(N):
     for j in range(M):
         if(arr[i][j] == -1):
             airCleancer.append([i, j])
+
+
 def spread():
     dusts = deque()
     for i in range(N):
@@ -19,17 +21,18 @@ def spread():
                 dusts.append([i, j, arr[i][j]])
     while(dusts):
         now = dusts.popleft()
-        
+
         dust = now[2] // 5
         cnt = 0
         for i in range(4):
             ny = now[0] + dy[i]
             nx = now[1] + dx[i]
-            
+
             if(0 <= ny < N and 0 <= nx < M and arr[ny][nx] >= 0):
                 arr[ny][nx] += dust
                 cnt += 1
         arr[now[0]][now[1]] -= cnt * dust
+
 
 def Clock():
     y, x = airCleancer[0]
@@ -46,6 +49,8 @@ def Clock():
                 y, x = ny, nx
             else:
                 break
+
+
 def AntiClock():
     y, x = airCleancer[1]
     dire = [2, 1, 0, 3]
@@ -62,6 +67,7 @@ def AntiClock():
             else:
                 break
 
+
 for i in range(T):
     spread()
     Clock()
@@ -69,5 +75,5 @@ for i in range(T):
 res = 2
 for i in range(N):
     for j in range(M):
-       res += arr[i][j]
-print(res) 
+        res += arr[i][j]
+print(res)

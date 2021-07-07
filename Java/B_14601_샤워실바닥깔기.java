@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class B_14601_»þ¿ö½Ç¹Ù´Ú±ò±â {
+public class B_14601_ìƒ¤ì›Œì‹¤ë°”ë‹¥ê¹”ê¸° {
 
 	static class Position {
 		int y, x;
@@ -45,7 +45,7 @@ public class B_14601_»þ¿ö½Ç¹Ù´Ú±ò±â {
 		System.out.println(sb);
 	}
 
-	// ´Ù½Ã ºÁ¾ßÇÒ ÇÊ¿ä¼ºÀÌ ÀÖÀ½ °³¾î·Á¿ò
+	// ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ä¼ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	static void dfs(int y, int x, int n) {
 		cnt++;
 		int len = n / 2;

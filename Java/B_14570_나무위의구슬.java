@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class B_14570_³ª¹«À§ÀÇ±¸½½ {
+public class B_14570_ë‚˜ë¬´ìœ„ì˜êµ¬ìŠ¬ {
 
 	static class Node {
 		int left, right;

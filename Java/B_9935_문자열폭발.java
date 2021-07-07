@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class B_9935_¹®ÀÚ¿­Æø¹ß {
+public class B_9935_ë¬¸ìì—´í­ë°œ{
 
 	static String text, pattern;
 	static Stack<Character> stack = new Stack<>();
